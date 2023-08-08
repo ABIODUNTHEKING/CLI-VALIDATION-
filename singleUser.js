@@ -7,7 +7,7 @@ let created = 'Created at ' + new Date().toLocaleString('en-US', {month: "long",
 let generated = 'Generated at ' + new Date().toLocaleString('en-US', {month: "long", day: "numeric", hour : 'numeric', minute : 'numeric', hour12: true})
 let timeOfArrival = 'Will be delievered at ' + new Date().setDate()
 
- function RegisterUser(userInputs){
+ function registerUser(userInputs){
      console.log(`------------REGISTER USER-------------`)
 
      let userDetail = {
@@ -43,7 +43,7 @@ let timeOfArrival = 'Will be delievered at ' + new Date().setDate()
              console.log('You did not provide a valid email address')
             return
          }
-         else if(userInputs.password.trim() == "" || userInputs['password'].trim() == "" ||userInputs.password.length < 3){
+         else if(userInputs.password == ""||userInputs.password.length < 3){
              console.log('You did not provide a valid password')
              return
          }
@@ -95,37 +95,6 @@ let timeOfArrival = 'Will be delievered at ' + new Date().setDate()
      })
      console.log(updated)
  }
-
-
- RegisterUser({
-     firstName: 'ABIODUN', 
-     lastName: 'Akinjogunla',
-     email: 'emmanuel6ige@gmail.com',
-     password: 'Emmanuel',
-     productName : 'Amala',
-     productPrice: 3000,
- })
- RegisterUser({
-     firstName: 'Emmanuel', 
-     lastName: 'Akinjogunla',
-     email: 'emmanuel6ige@gmail.com',
-     password: 'DET PPA',
-     productName : 'Amala',
-     productPrice: 3000,
- })
- RegisterUser({
-     firstName: 'OLUWANISHOLA', 
-     lastName: 'Akinjogunla',
-     email: 'emmanuel6ige@gmail.com',
-     password: 'DET PPA',
-     productName : 'Amala',
-     productPrice: 3000,
- })
-
- updateOne(1, 'id', 'John OKAY')
- getOne(1)
- deleteOne(3)
-
 
 function createOrder(userOrders){
     console.log(`-------CREATE ORDER-------------`)
@@ -192,6 +161,37 @@ function deleteOrder(id){
         }
     })
 }
+
+
+registerUser({
+    firstName: 'ABIODUN', 
+    lastName: 'Akinjogunla',
+    email: 'emmanuel6ige@gmail.com',
+    password: 'Emmanuel',
+    productName : 'Amala',
+    productPrice: 3000,
+})
+registerUser({
+    firstName: 'Emmanuel', 
+    lastName: 'Akinjogunla',
+    email: 'emmanuel6ige@gmail.com',
+    password: 'DET PPA',
+    productName : 'Amala',
+    productPrice: 3000,
+})
+registerUser({
+    firstName: 'OLUWANISHOLA', 
+    lastName: 'Akinjogunla',
+    email: 'emmanuel6ige@gmail.com',
+    password: 'DET PPA',
+    productName : 'Amala',
+    productPrice: 3000,
+})
+
+updateOne(1, 'id', 'John OKAY')
+getOne(1)
+deleteOne(3)
+
 
 createOrder({
     productName: 'AMALA',
