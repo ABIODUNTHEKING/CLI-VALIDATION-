@@ -99,7 +99,7 @@ let timeOfArrival = 'Will be delievered at ' + new Date().setDate()
 function createOrder(userOrders){
     console.log(`-------CREATE ORDER-------------`)
     let orderDetail = {
-        productName : userOrders.productName == undefined ||  userOrders.productName == "" || typeof userOrders.productName == Number? console.log('Put in a valid user ID so we can accept your order') : userOrders.productName,
+        productName : userOrders.productName == undefined ||  userOrders.productName == "" || typeof userOrders.productName == Number? console.log('Put in a valid product name so we can accept your order') : userOrders.productName,
         productId : orderDataBase.length + 1,
         productPrice : typeof userOrders.productPrice == String ? console.log('Put in a valid price') : userOrders.productPrice,
         eta : timeOfArrival,
